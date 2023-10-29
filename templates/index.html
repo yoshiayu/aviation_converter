@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>単位変換ツール</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>単位変換ツール</h1>
+        
+        <!-- 変換元の単位の選択 -->
+        <label for="fromUnit">変換元の単位:</label>
+        <select id="fromUnit">
+            <option value="knotsToMs">knots → m/s</option>
+            <option value="knotsToKmh">knots → km/h</option>
+            <option value="NMToM">NM → m</option>
+            <option value="mileToM">mile → m</option>
+            <option value="lbToKg">lb → kg</option>
+            <option value="galToL">gal → L</option>
+            <option value="inHgToPa">inHg → Pa</option>
+            <option value="inHgTohPa">inHg → hPa</option>
+            <option value="psiToPa">psi → Pa</option>
+            <option value="NmToftlb">N・m → ft-lb</option>
+            <option value="NmToinlb">N・m → in-lb</option>
+            <option value="ftlbToinlb">ft-lb → in-lb</option>
+            <option value="inlbToftlb">in-lb → ft-lb</option>
+            <!-- 他の単位もここに追加 -->
+        </select>
+
+        <!-- 変換先の単位は自動的に選択されるため、選択ボックスは不要 -->
+
+        <!-- 数値の入力 -->
+        <label for="inputValue">変換する数値:</label>
+        <input type="number" id="inputValue">
+
+        <!-- 変換ボタン -->
+        <button id="convertButton">変換</button>
+
+        <!-- 結果の表示 -->
+        <div id="resultDisplay"></div>
+    </div>
+
+    <script src="{% static 'scripts.js' %}"></script>
+</body>
+</html>

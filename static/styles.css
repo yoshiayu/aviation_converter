@@ -1,0 +1,83 @@
+/* 全ての要素のbox-sizingをborder-boxに設定 */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #4a90e2;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+select, input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dfe3e9;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4a90e2;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #357ab7;
+}
+
+#resultDisplay {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+/* レスポンシブデザインの適用 */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    label, input, select, button {
+        margin-bottom: 15px;
+    }
+}
